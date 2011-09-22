@@ -1,0 +1,16 @@
+Configuration:
+edit stream.js and set your twitter username password to see twitter's stream.
+
+    var username = 'twitter_username', //ie: 'chovy'
+        password = 'twitter_password'; //ie: 'xxxxx'
+
+You may need to install some missing modules with npm. http://npmjs.org/
+
+Once npm is installed, you can install the missing modules with:
+$ npm install <module-name>
+
+Startup:
+$ node stream.js
+
+
+
