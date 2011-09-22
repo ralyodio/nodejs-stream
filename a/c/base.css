@@ -1,0 +1,18 @@
+html, html * { margin: 0; padding: 0; }
+.providers:after, #results li:after, .clfx:after { content: '.'; display: block; visibility: hidden; overflow: hidden; clear: both; font-size: 0; height: 0; }
+header, article, section, footer, nav { display: block; }
+html { background: #eee; }
+body { background: #fff; border: 1px solid #ddd; border-radius: 5px; font-family: sans-serif; margin: 20px auto; width: 500px; padding: 20px; }
+ol, ul { list-style-type: none; }
+#results { padding-left: 20px; margin-top: 20px; }
+#results li { margin-bottom: 10px; }
+#results .profile { float: left; width: 100px; }
+#results .profile img { display: block; }
+#results .profile a { font-size: 11px; text-decoration: none; }
+#results .text { float: left; width: 300px; }
+
+.twitter { background: #eef; }
+.digg { background: #eee; }
+.meetup { background: #fee; }
+
+div.twitter, div.digg, div.meetup { width: 64px; height: 20px; margin-right: 10px; float: left; text-align: center; color: #333; padding-top: 5px; }
