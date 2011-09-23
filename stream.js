@@ -4,7 +4,7 @@ var http = require('http'),
 		sys = require("sys"),
 		spawn = require("child_process").spawn,
 		jsonline = require('json-line-protocol').JsonLineProtocol,
-		cfg = require('./config');
+		cfg = require('./config'),
 		fs = require("fs");
 
 http.createServer(function (req, res) {
