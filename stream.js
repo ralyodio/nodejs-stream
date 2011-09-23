@@ -96,27 +96,27 @@ http.createServer(function (req, res) {
 		console.log(filename);
 
 		if (filename.indexOf(__dirname) == 0 ) {
-    path.exists(filename, function(exists) {
-			if(!exists) {  
-				res.writeHead(404, {"Content-Type": "text/plain"});  
-				res.write("404 Not Found\n");  
-				res.end();  
-				return;  
-			}  
+			path.exists(filename, function(exists) {
+				if(!exists) {  
+					res.writeHead(404, {"Content-Type": "text/plain"});  
+					res.write("404 Not Found\n");  
+					res.end();  
+					return;  
+				}  
 
-			fs.readFile(filename, "binary", function(err, file) {
-				if(err) {
-					res.writeHead(500, {"Content-Type": "text/plain"});
-					res.write(err + "\n");
+				fs.readFile(filename, "binary", function(err, file) {
+					if(err) {
+						res.writeHead(500, {"Content-Type": "text/plain"});
+						res.write(err + "\n");
+						res.end();
+						return;
+					}
+
+					res.writeHead(200);
+					res.write(file, "binary");
 					res.end();
-					return;
-				}
-
-				res.writeHead(200);
-				res.write(file, "binary");
-				res.end();
+				});
 			});
-    });
 
 		} else {
 			console.log("invalid path: " + filename);
