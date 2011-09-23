@@ -26,3 +26,5 @@ Startup
 -------------
 
 	$ node stream.js
+
+Browse to your localhost (ie: http://192.168.1.1:8080/) in your web browser.
