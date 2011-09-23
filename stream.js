@@ -4,6 +4,7 @@ var http = require('http'),
 		sys = require("sys"),
 		spawn = require("child_process").spawn,
 		jsonline = require('json-line-protocol').JsonLineProtocol,
+		cfg = require('./config');
 		fs = require("fs");
 
 http.createServer(function (req, res) {
@@ -12,8 +13,8 @@ http.createServer(function (req, res) {
 
 	if ( uri == '/stream' ) {
 		var jsonTwitter = new jsonline();
-		var username = 'twitter_username',
-				password = 'twitter_password';
+		var username = cfg.twitter_username,
+				password = cfg.twitter_password;
 		var options = {
 			host: 'stream.twitter.com',
 			port: 80,
@@ -116,6 +117,6 @@ http.createServer(function (req, res) {
 			});
     });
 	}
-}).listen(8080, "192.168.1.64");
+}).listen(cfg.port, cfg.address);
 
-console.log('Server running at http://192.168.1.64:8080/');
+console.log('Server running at http://'+cfg.address+':'+cfg.port+'/');

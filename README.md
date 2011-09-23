@@ -6,14 +6,29 @@ An example NodeJS application which uses an event-stream to push notifications t
 Configuration
 -------------
 
-Edit stream.js and set your twitter username password to see twitter's stream.
+Method 1:
 
-	var username = 'twitter_username', //ie: 'chovy'
-			password = 'twitter_password'; //ie: 'xxxxx'
+	export TWITTER_USERNAME='your_username';
+	export TWITTER_PASSWORD='your_password';
 
-Go to last line and change your IP number to whatever IP you are serving from and port number if different than 8080, or you can use 'localhost' to test locally.
+Method 2:
 
-	}).listen(8080, "192.168.1.1");
+...or edit config.js and set your twitter username password.
+
+	config.twitter_username = process.env.TWITTER_USERNAME || 'my_username';
+	config.twitter_password = process.env.TWITTER_PASSWORD || 'my_password';
+
+
+config.js 
+---------
+
+Edit config.js and set your port number to listen on and IP address (you can use 'localhost' too).
+
+	config.port = 8080;
+	config.address = '192.168.1.64';
+
+Modules
+-------
 
 You may need to install some missing modules with npm. http://npmjs.org/
 
