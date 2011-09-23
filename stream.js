@@ -92,9 +92,10 @@ http.createServer(function (req, res) {
 		});
 	} else {
 		if ( uri == '/' ) uri = '/index.htm';
-		var filename = path.join(process.cwd(), uri);  
+		var filename = path.normalize( path.join(process.cwd(), uri) ); 
 		console.log(filename);
 
+		if (filename.indexOf(__dirname) == 0 ) {
     path.exists(filename, function(exists) {
 			if(!exists) {  
 				res.writeHead(404, {"Content-Type": "text/plain"});  
@@ -116,6 +117,14 @@ http.createServer(function (req, res) {
 				res.end();
 			});
     });
+
+		} else {
+			console.log("invalid path: " + filename);
+			res.writeHead(404, {"Content-Type": "text/plain"});  
+			res.write("404 Not Found\n");  
+			res.end();  
+			return;  
+		}
 	}
 }).listen(cfg.port, cfg.address);
 
