@@ -1,5 +1,5 @@
 html, html * { margin: 0; padding: 0; }
-.providers:after, #results li:after, .clfx:after { content: '.'; display: block; visibility: hidden; overflow: hidden; clear: both; font-size: 0; height: 0; }
+.providers:after, #results li:after, .clearfix:after { content: '.'; display: block; visibility: hidden; overflow: hidden; clear: both; font-size: 0; height: 0; }
 header, article, section, footer, nav { display: block; }
 html { background: #eee; }
 body { background: #fff; border: 1px solid #ddd; border-radius: 5px; font-family: sans-serif; margin: 20px auto; width: 500px; padding: 20px; }
