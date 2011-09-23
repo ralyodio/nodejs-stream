@@ -1,7 +1,6 @@
 var http = require('http'),
 		url = require("url"),
 		path = require("path"),  
-		lazy = require("lazy"),
 		sys = require("sys"),
 		spawn = require("child_process").spawn,
 		jsonline = require('json-line-protocol').JsonLineProtocol,
