@@ -6,10 +6,12 @@ An example NodeJS application which uses an event-stream to push notifications t
 Configuration
 -------------
 
+Configure your twitter account username and password.
+
 Method 1:
 
-	export TWITTER_USERNAME='your_username';
-	export TWITTER_PASSWORD='your_password';
+	$ export TWITTER_USERNAME='your_username';
+	$ export TWITTER_PASSWORD='your_password';
 
 Method 2:
 
@@ -42,4 +44,4 @@ Startup
 
 	$ node stream.js
 
-Browse to your localhost (ie: http://192.168.1.1:8080/) in your web browser.
+Browse to your localhost (ie: http://192.168.1.64:8080/) in your web browser.
