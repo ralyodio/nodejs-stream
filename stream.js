@@ -1,4 +1,5 @@
 var http = require('http'),
+		https = require('https'),
 		url = require("url"),
 		path = require("path"),  
 		sys = require("sys"),
@@ -17,7 +18,7 @@ http.createServer(function (req, res) {
 				password = cfg.twitter_password;
 		var options = {
 			host: 'stream.twitter.com',
-			port: 80,
+			port: 443,
 			//path: '/1/statuses/filter.json?locations=-122.75,36.8,-121.75,37.8&track=baseball',
 			path: '/1/statuses/filter.json?locations=-122.75,36.8,-121.75,37.8',
 			headers: {
@@ -26,12 +27,13 @@ http.createServer(function (req, res) {
 		};
 
 		res.writeHead(200, {'Content-Type': 'text/event-stream'});
-		http.get(options, function(resp){
+		https.get(options, function(resp){
 			resp.on('data', function(chunk){
 				jsonTwitter.feed(chunk);
 			});
 		}).on("error", function(e){
 			console.log("Got error: " + e.message);
+			console.log("Got error: " + e);
 		});
 
 		jsonTwitter.on('value', function (value) {
