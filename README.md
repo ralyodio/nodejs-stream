@@ -1,7 +1,7 @@
 NodeJS Stream
 =============
 
-An example NodeJS application which uses an event-stream to push notifications to the client side using HTML5 WebSockets.
+An example NodeJS application which uses an event-stream to push notifications to the client side using server side events.
 
 Configuration
 -------------
