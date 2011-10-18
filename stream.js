@@ -41,7 +41,6 @@ http.createServer(function (req, res) {
 			res.write("data: "+JSON.stringify(value)+"\n\n");
 		});
 
-		var jsonDigg = new jsonline();
 		var options = {
 			host: 'services.digg.com',
 			port: 80,
@@ -58,7 +57,6 @@ http.createServer(function (req, res) {
 			console.log("Got error: " + e.message);
 		});
 
-		var jsonMeetup = new jsonline();
 		var options = {
 			host: 'stream.meetup.com',
 			port: 80,
@@ -76,7 +74,6 @@ http.createServer(function (req, res) {
 			console.log("Got error: " + e.message);
 		});
 
-		var jsonMeetupEvents = new jsonline();
 		var options = {
 			host: 'stream.meetup.com',
 			port: 80,

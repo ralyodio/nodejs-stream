@@ -24,7 +24,7 @@ Method 2:
 config.js 
 ---------
 
-Edit config.js and set your port number to listen on and IP address (you can use 'localhost' too).
+Copy config.sample.js to config.js. Edit config.js and set your port number to listen on and IP address (you can use 'localhost' too).
 
 	config.port = 8080;
 	config.address = '192.168.1.64';
