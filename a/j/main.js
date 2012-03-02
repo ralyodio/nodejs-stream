@@ -33,7 +33,6 @@ var stream = function(){
 		log.add(data);
 	}, false);
 
-/*
 	source.addEventListener('digg', function(e) {
 		var data,
 				htm = [];
@@ -97,7 +96,6 @@ var stream = function(){
 		$("#results").prepend( rsvps() );
 		$("#results li:first-child").fadeIn();
 	}, false);
-*/
 
 	source.addEventListener('open', function(e) {
 		log.add("opened");

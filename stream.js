@@ -2,7 +2,6 @@ var http = require('http'),
 		https = require('https'),
 		url = require("url"),
 		path = require("path"),  
-		sys = require("sys"),
 		spawn = require("child_process").spawn,
 		jsonline = require('json-line-protocol').JsonLineProtocol,
 		cfg = require('./config'),
@@ -41,7 +40,7 @@ http.createServer(function (req, res) {
 			res.write("data: "+JSON.stringify(value)+"\n\n");
 		});
 
-		var options = {
+		options = {
 			host: 'services.digg.com',
 			port: 80,
 			path: '/2.0/stream'
@@ -57,7 +56,7 @@ http.createServer(function (req, res) {
 			console.log("Got error: " + e.message);
 		});
 
-		var options = {
+		options = {
 			host: 'stream.meetup.com',
 			port: 80,
 			//path: '/2/open_events'
@@ -74,7 +73,7 @@ http.createServer(function (req, res) {
 			console.log("Got error: " + e.message);
 		});
 
-		var options = {
+		options = {
 			host: 'stream.meetup.com',
 			port: 80,
 			path: '/2/open_events'
