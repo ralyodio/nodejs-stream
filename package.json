@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-stream",
+  "description": "Example event stream using node.js",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "json-line-protocol": "*"
+  }
+}
