@@ -36,8 +36,8 @@ You may need to install some missing modules with npm. http://npmjs.org/
 
 Once npm is installed, you can install the missing modules with:
 
-	$ npm install <module-name>
-	$ npm install json-line-protocol
+	$ cd ./nodejs-stream
+	$ npm install
 
 Startup
 -------------
