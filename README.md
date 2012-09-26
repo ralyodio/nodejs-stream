@@ -1,7 +1,7 @@
 NodeJS Stream
 =============
 
-An example NodeJS application which uses an event-stream to push notifications to the client side using server side events.
+An example NodeJS application which uses an event-stream to push notifications to the client side using server side events. Firehose provided by Twitter, Meetup, and Digg.
 
 Configuration
 -------------
